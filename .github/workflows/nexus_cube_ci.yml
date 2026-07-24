@@ -1,0 +1,38 @@
+name: QUANTUM_SNAIL_CUBE_CI
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  detonate_benchmark:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+    - name: Checkout Sovereign Repository Code
+      uses: actions/checkout@v4
+
+    - name: Initialize Isolated Python Environment
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Deploy High-Performance Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install numpy matplotlib
+
+    - name: Run Quantum Cube Stress Test & Purge Noise
+      run: |
+        python agarda_benchmark.py
+
+    - name: Commit Performance Artifacts to Main Branch
+      run: |
+        git config --global user.name "MarkysUNIT77"
+        git config --global user.email "logopotopo@gmail.com"
+        git add quantum_snail_performance.png
+        git diff-index --quiet HEAD || git commit -m "🔥 RECODE LOGS: Initialize Quantum Snail Performance Graph // Pure Run"
+        git push
