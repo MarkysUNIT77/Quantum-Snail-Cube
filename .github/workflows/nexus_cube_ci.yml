@@ -44,3 +44,4 @@ jobs:
           echo "[START] Инициализация тестового залпа на Runner-матрице..."
           python agarda_benchmark.py
           echo "[SUCCESS] Проверка конгруэнтности пройдена. Ошибки и баги: 0.00%."
+
