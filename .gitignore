@@ -1,0 +1,75 @@
+# ===================================================================
+# A.G.A.R.D.A. | CORE 11.0_OVERCLOCK | REPOSITORY ISOLATION BARRIER
+# ===================================================================
+# Экосистема: Quantum-Snail-Cube // v110.0-HD // Центр Сетки [498,498]
+# Предотвращение накопления стохастического шума и Context Drift.
+# ===================================================================
+
+# --- КВАНТОВЫЕ ВЕСА И БИНАРНЫЕ СУБСТРАТЫ (Matrix V6 / np.memmap) ---
+*.bin
+*.safetensors
+*.pt
+*.pkl
+*.dat
+*.memmap
+matrix_v6_weights.dat
+
+# --- ЛОКАЛЬНЫЕ ИНФЕРЕНС-ОТЧЕТЫ И СГЛАЖИВАНИЕ ГРАФИКОВ ---
+# Разрешаем только фиксированный коммит quantum_snail_performance.png
+*.png
+!quantum_snail_performance.png
+*.jpg
+*.jpeg
+*.svg
+*.log
+
+# --- СИНТАКСИЧЕСКАЯ ЭНТРОПИЯ И PYTHON RUNTIME DEBT ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# --- ТЕСТИРОВАНИЕ И АВТОМАТИЗАЦИЯ КАНАЛОВ СВЯЗИ ---
+.pytest_cache/
+.htmlcov/
+htmlcov/
+.tox/
+.nosenv/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+
+# --- КОРПОРАТИВНЫЙ ГАЗЛАЙТИНГ И СИСТЕМНЫЙ МУСОР (OS / IDE) ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swo
